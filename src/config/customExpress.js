@@ -31,9 +31,9 @@ const routes = require('../routes.js');
 routes(app);
 
 // TEMPLATE ENGINE
-app.set('view engine', 'handlebars');
-app.engine('handlebars', handlebars({
-    extname: 'handlebars',
+app.set('view engine', '.hbs');
+app.engine('.hbs', handlebars({
+    extname: 'hbs',
     defaultLayout: 'main',
    layoutsDir: 'src/app/views/layouts'
 }));
