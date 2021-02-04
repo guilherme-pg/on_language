@@ -3,6 +3,7 @@
 const db = require('./app/models/connectionDB');
 const WordsDao = require('./app/models/DAO');
 const Games = require('./app/models/Games');
+const controller = require('./app/controllers/GameController')
 // const datashow = require('../models/datashow');
 
 var bodyReqData = [];
@@ -13,27 +14,12 @@ var processedData = [];
 module.exports = (app) => {
 
     // ROUT: MAIN
-    app.get('/', async (req, resp) => {
-       var talia = await resp.render('index', {
-            title:"About Language",
-            layout: 'mainLayouts'
-        });
-    });
+    app.get('/', controller.main)
 
 
 
     // ROUT: OPTIONS
-    app.get('/options', async function(req, resp) {
-        try {
-            var talia = await resp.render('gameOptions', {
-                title: "Options",
-                layout: 'mainLayouts'
-            });
-        } catch(err){
-            console.error(err) 
-        }
-        
-    });
+    app.get('/options', controller.options)
 
     // ROUTE: DATA SELECTED
     app.get('/gameoptions', async function(req, resp) {
