@@ -1,0 +1,59 @@
+
+#game_space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+#articles_container {
+    background-color: darkolivegreen;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+}
+
+#words_containers {
+    display: flex;
+    align-items: flex-end;
+    width: 80%;
+    background-color: blueviolet;
+    flex-direction: column;
+}
+
+.links_container {
+    /* background-color: darkred; */
+    margin: 5px;
+    width: 50%;
+}
+
+.word_container {
+    display: flex;
+    align-items: flex-end;
+    background-color: greenyellow;
+}
+
+.links_draggable {
+    
+    transition: transform 0ms ease 0s;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 130%;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 6px 0 gray;
+    margin: 7px;
+    padding: 5px;
+    width: min-content;
+}
